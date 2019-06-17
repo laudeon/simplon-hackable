@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+
+    /\__/\
+   /`    '\
+ === 0  0 ===
+   \  --  /
+  /        \
+ /          \
+|            |
+ \  ||  ||  /
+  \_oo__oo_/#######o
+
+  Miaou ! Si tu es ici, c'est que tu as passé l'étape #0. Bravo *miaou* !
+
+  Ne te méprend pas, la première récompense n'arrivera qu'à l'issue de cette étape #1. Encore une peu de patiente et d'effort !
+
+  Règles pour l'étape #1 : 
+    1. tu dois deviner le mot de passe pour te connecter. Je l'ai oublié donc je ne peux pas t'aider. Mais ce que je peux te dire, c'est qu'il est utilisé par beaucoup de monde.
+    2. Le pseudo je te le file, je suis hyper sympa *miaaaouu*. C'est "superCat".
+
+-->
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Simplon Hackable</title>
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <h1>
+      Simplon Hackable!
+      <br><small>Tu veux jouer ? Tu veux hacker ? Tu veux que je te révèles des secrets ? Alors, jouons !</small>
+    </h1>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="">Règle du jeu</a>
+          <a href="">À propos</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Étape #1</h1>
+
+    <h2>Connexion</h2>
+    <?php if($error): ?>
+      <p class="error">Mauvaise combinaison pseudo / mot de passe</p>
+    <?php endif ?>
+    <form action="/connexion" method="post">
+      <label for="pseudo">Pseudo</label>
+      <input type="text" name="pseudo" id="pseudo" required>
+
+      <label for="password">Mot de passe</label>
+      <input type="password" name="password" id="password" required>
+
+      <button type="submit">Connexion</button>
+    </form>
+  </main>
+
+  <footer>
+    Made with &hearts; by Louis for <a href="https://simplon.co">Simplon</a>
+  </footer>
+  <script src="js/app.js"></script>
+  <script>
+    App.run();
+  </script>
+</body>
+</html>

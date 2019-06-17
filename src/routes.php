@@ -22,4 +22,14 @@ return function (App $app) {
         // Render index view
         return $container->get('renderer')->render($response, 'index.html', $args);
     });
+
+    $app->post('/connexion', function (Request $request, Response $response, array $args) use ($container) {
+      $body = $request->getParsedBody();
+
+      if($body['pseudo'] === 'superCat' && $body['password'] === getenv('MDP')) {
+        return $container->get('renderer')->render($response, 'javascript.html');
+      } else {
+        return $container->get('renderer')->render($response, 'connexion.phtml', ['error' => true]);
+      }
+    });
 };

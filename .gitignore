@@ -1,5 +1,12 @@
+#DEPS
 /vendor/
+
+#LOGS
 /logs/*
 !/logs/README.md
 
+#COMPOSER
 composer.phar
+
+#ENV
+.env
