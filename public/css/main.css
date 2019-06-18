@@ -58,6 +58,7 @@ body {
   font-size: 1rem;
   font-weight: 300;
   color: #212121;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,14 +79,14 @@ ul {
 }
 
 header, main, footer {
-  padding: 5%;
+  padding: 2% 4%;
 }
 
 /**
   Header
 */
 body > header h1 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 body > header h1 small {
   color: #212121;
@@ -111,4 +112,23 @@ body > header nav ul li a{
 body > header nav ul li:hover {
   box-shadow: 1px 1px 8px rgba(206,0,51,.6);
   cursor: pointer;
+}
+
+/**
+  MAIN
+*/
+body > main  {
+  margin-top: 0;
+}
+body > main h1, body > main h2 {
+  margin: 3rem 0;
+  font-size: 2rem;
+}
+body > main p {
+  font-size: 1.3rem;
+}
+body > main img {
+  margin: 1rem 0;
+  box-shadow: 1px 1px 15px rgba(206,0,51,.2);
+  width: 50%;
 }
