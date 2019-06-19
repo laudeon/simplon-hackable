@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+
+    /\__/\
+   /`    '\
+ === 0  0 ===
+   \  --  /
+  /        \
+ /          \
+|            |
+ \  ||  ||  /
+  \_oo__oo_/#######o
+
+  Miaou ! Si tu es ici, c'est que tu as passé l'étape #0. Bravo *miaou* !
+
+  En récompense, voici la première info, le nouveau plaidoyer de Simplon : https://plaidoyer.simplon.co
+
+  Règles pour l'étape #1 : 
+    1. tu dois deviner le mot de passe pour te connecter. Je l'ai oublié donc je ne peux pas t'aider. Mais ce que je peux te dire, c'est qu'il est utilisé par beaucoup de monde.
+    2. Le pseudo je te le file, je suis hyper sympa *miaaaouu*. C'est "superCat".
+
+-->
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Simplon Hackable</title>
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <h1>
+      Simplon Hackable!
+      <br><small>Tu veux découvir les dernières nouveautés Simplon ? Alors joue et hack ce site web !</small>
+    </h1>
+  </header>
+
+  <main>
+    <h2>Connexion</h2>
+    <?php if($error): ?>
+      <p class="error">Mauvaise combinaison pseudo / mot de passe</p>
+    <?php endif ?>
+    <form action="/connexion" method="post">
+      <label for="pseudo">Pseudo</label>
+      <input type="text" name="pseudo" id="pseudo" required>
+
+      <label for="password">Mot de passe</label>
+      <input type="password" name="password" id="password" required>
+
+      <button type="submit">Connexion</button>
+    </form>
+  </main>
+</body>
+</html>
