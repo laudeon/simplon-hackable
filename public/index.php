@@ -15,7 +15,7 @@ session_start();
 
 //Env vars
 try {
-  $dotenv = Dotenv::create(__DIR__);
+  $dotenv = Dotenv\Dotenv::create(__DIR__);
   $dotenv->load();
 } catch (InvalidPathException $e) {
   // Heroku workaround
