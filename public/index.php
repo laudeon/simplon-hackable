@@ -14,11 +14,9 @@ require __DIR__ . '/../vendor/autoload.php';
 session_start();
 
 //Env vars
-try {
+if (file_exists(__DIR__ . '/.env')) {
   $dotenv = Dotenv\Dotenv::create(__DIR__);
   $dotenv->load();
-} catch (InvalidPathException $e) {
-  // Heroku workaround
 }
 
 // Instantiate the app
